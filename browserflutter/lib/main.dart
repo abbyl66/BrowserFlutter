@@ -30,7 +30,7 @@ class _BrowserState extends State<Browser>{
       //En caso de que contenga '.', sobreentendemos que es una página. Por lo que sólo agregamos 'https://'.
        if(control.text.contains('.')){
         urlBrowser = 'https://'+control.text;
-      }else{ //Buscamos a aprtir de google.
+      }else{ //En caso contrario, buscamos a partir de google.
         urlBrowser = 'https://www.google.com/search?q='+control.text;
       }
       flutterWebviewPlugin.reloadUrl(urlBrowser);
