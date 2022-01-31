@@ -24,7 +24,7 @@ class _BrowserState extends State<Browser>{
     super.initState();
   }
 
-  //Método para buscar páginas y palabras, texto.
+  //Método para buscar páginas, palabras, texto...
   void webviewProcess(){
     setState(() {
        if(control.text.contains('.')){
