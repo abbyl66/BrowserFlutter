@@ -27,9 +27,10 @@ class _BrowserState extends State<Browser>{
   //Método para buscar páginas, palabras, texto...
   void webviewProcess(){
     setState(() {
+      //En caso de que contenga '.', sobreentendemos que es una página. Por lo que sólo agregamos 'https://'.
        if(control.text.contains('.')){
         urlBrowser = 'https://'+control.text;
-      }else{
+      }else{ //Buscamos a aprtir de google.
         urlBrowser = 'https://www.google.com/search?q='+control.text;
       }
       flutterWebviewPlugin.reloadUrl(urlBrowser);
